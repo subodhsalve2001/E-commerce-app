@@ -1,0 +1,5 @@
+01-04-2023 	 15:21:48	MongoServerError	$regex has to be a string	GET	/api/employee/search	http://localhost:3000
+01-04-2023 	 15:21:39	MongoServerError	$regex has to be a string	GET	/api/employee/search	http://localhost:3000
+01-04-2023 	 15:21:30	MongoServerError	$regex has to be a string	GET	/api/employee/search	http://localhost:3000
+31-03-2023 	 14:32:58	TokenExpiredError	jwt expired	POST	/api/cart/add-to-cart	http://localhost:3000
+31-03-2023 	 14:32:35	TokenExpiredError	jwt expired	GET	/api/cart/cart-history	http://localhost:3000

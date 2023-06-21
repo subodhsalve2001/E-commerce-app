@@ -1,0 +1,22 @@
+18-06-2023 	 12:06:10	POST	/api/auth/user/login	undefined
+18-06-2023 	 12:05:58	POST	/api/user/add	undefined
+18-06-2023 	 12:05:29	POST	/api/auth/user/login	undefined
+18-06-2023 	 11:50:01	POST	/api/auth/employee/login	undefined
+18-06-2023 	 11:49:28	POST	/api/auth/login	undefined
+18-06-2023 	 11:49:27	POST	/api/auth/login	undefined
+18-06-2023 	 11:48:51	POST	/api/employee/login	undefined
+18-06-2023 	 11:47:15	GET	/api/employee	undefined
+18-06-2023 	 11:37:59	POST	/api/employee/register	undefined
+18-06-2023 	 11:37:53	POST	/api/employee/register	undefined
+18-06-2023 	 11:36:56	POST	/api/employee/register	undefined
+18-06-2023 	 11:32:33	POST	/user/register	undefined
+18-06-2023 	 11:29:08	POST	/api/user/add	undefined
+17-06-2023 	 11:44:20	POST	/api/auth/user/login	http://localhost:3000
+17-06-2023 	 11:43:11	POST	/api/auth/user/login	http://localhost:3000
+17-06-2023 	 11:42:46	GET	/api/employee	undefined
+17-06-2023 	 11:42:06	POST	/api/products/add-product	undefined
+17-06-2023 	 11:41:52	GET	/api/products/add-product	undefined
+17-06-2023 	 11:40:52	GET	/api/products	undefined
+17-06-2023 	 11:38:37	GET	/api/user/profile	http://localhost:3000
+17-06-2023 	 11:38:36	GET	/api/user/profile	http://localhost:3000
+000
