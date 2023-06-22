@@ -25,9 +25,7 @@ app.use(cors({
         const allowed = [
             "http://localhost:5173",
             "http://localhost:3000",
-            // "http://localhost:5000",
             "https://www.google.com",
-            // "https://www.google.com/"
         ]
         if (allowed.indexOf(o) !== -1 || !o) {
             cb(null, true)
