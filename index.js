@@ -23,9 +23,9 @@ app.use(cors({
     credentials: true,
     origin: (o, cb) => {
         const allowed = [
-            "http://localhost:5173",
-            "http://localhost:3000",
-            "https://www.google.com",
+            // "http://localhost:5173",
+            // "http://localhost:3000",
+           " e-commerce-app-production-5102.up.railway.app"
         ]
         if (allowed.indexOf(o) !== -1 || !o) {
             cb(null, true)
