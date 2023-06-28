@@ -19,21 +19,7 @@ app.use(express.json())
 app.use(express.static("publics"))
 app.use(log)
 app.use(cookieParser())
-app.use(cors({
-    credentials: true,
-    origin: (o, cb) => {
-        const allowed = [
-            // "http://localhost:5173",
-            // "http://localhost:3000",
-           "e-commerce-app-production-5102.up.railway.app"
-        ]
-        if (allowed.indexOf(o) !== -1 || !o) {
-            cb(null, true)
-        } else {
-            cb("blocked by cors")
-        }
-    }
-}))
+app.use(cors())
 app.use("/api/user", require("./routes/userRoute"))
 app.use("/api/cart", require("./routes/cartRoute"))
 app.use("/api/order", require("./routes/orderRoutes"))
