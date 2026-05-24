@@ -8,8 +8,9 @@ const app = express();
 app.use(cors()); 
 app.use(express.json());
 
-// 🔥 LINE 10: PASTE YOUR FULL URL INSIDE THESE QUOTES 🔥
-const MONGO_URI = "mongodb+srv://subodhsalve2002_db_user:hiVpmrZXZ8iXIWO2@cluster0.qo4aar3.mongodb.net/?appName=Cluster0";
+// Cloud Database Uniform Resource Identifier
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://subodhsalve2002_db_user:hiVpmrZXZ8iXIWO2@cluster0.qo4aar3.mongodb.net/?appName=Cluster0";
+
 // Connect to MongoDB
 mongoose.connect(MONGO_URI)
     .then(() => console.log('✅ Connected successfully to MongoDB Cloud!'))
@@ -21,7 +22,7 @@ const poemSchema = new mongoose.Schema({
     author: { type: String, required: true },
     category: { type: String, required: true },
     content: { type: String, required: true },
-    date: { type: String, required: true },
+    date: { type: String, required: true }, // Stored as strict ISO-8601 strings
     published: { type: Boolean, default: false }
 });
 
@@ -38,7 +39,7 @@ const Poem = mongoose.model('Poem', poemSchema);
 
 // --- API ROUTES ---
 
-// GET: Fetch all poems
+// GET: Fetch all poems chronologically
 app.get('/api/poems', async (req, res) => {
     try {
         const poems = await Poem.find({}).sort({ date: -1 });
@@ -96,8 +97,8 @@ app.delete('/api/poems/:id', async (req, res) => {
     }
 });
 
-// Start the server
-const PORT = 5000;
+// Dynamic Port Allocation enabling frictionless deployment to Render/Railway
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`🚀 Backend Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Backend Server running on port ${PORT}`);
 });
